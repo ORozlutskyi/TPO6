@@ -1,0 +1,17 @@
+<project name="db" default="dbinst" basedir=".">
+	<target name="dbinst">
+		<exec executable="d:\derby.bat">
+			<arg line="ij createdb.sql" />
+		</exec>
+	</target>
+	<target name="start-db">
+		<exec executable="d:\derby.bat">
+			<arg line="start" />
+		</exec>
+	</target>
+	<target name="stop-db">
+		<exec executable="d:\derby.bat">
+			<arg line="stop" />
+		</exec>
+	</target>
+</project>
